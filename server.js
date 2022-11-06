@@ -8,9 +8,9 @@ const app = express()
 const port = process.env.PORT || 9000
 
 const pusher = new Pusher({
-    appId: "1498702",
-    key: "e0bbae6bd53b5c5062c3",
-    secret: "409e7c872a8a6d146ae6",
+    appId: "your_id",
+    key: "your_key",
+    secret: "your_secret",
     cluster: "ap2",
     useTLS: true
 });
@@ -18,7 +18,7 @@ const pusher = new Pusher({
 app.use(express.json())
 app.use(cors())
 
-const connection_url = 'mongodb+srv://Avdhoot:test123@cluster0.wqy0i7n.mongodb.net/Whatsapp-clone?retryWrites=true&w=majority'
+const connection_url = 'MONGO_URI'
 
 mongoose.connect(connection_url, {
     useNewUrlParser: true,
